@@ -4,6 +4,7 @@ console.log(5 + x); // 7
 console.log(5 - x); // 3
 console.log(5 * x); // 10
 console.log(5 / x); // 2.5
+console.log(5 ** x); // 25
 console.log(5 % x); // 1 // 2 * 2 = 4 // 5 - 4 = 1
 
 console.log('5' + 2); // '52'
@@ -22,6 +23,7 @@ x += 5; // 7
 x -= 5; // 2
 x *= 5; // 10
 x /= 2; // 5
+x **= 2; // 25
 x %= 2; // 1
 
 console.log('x = ' + x); // 'x = 1'
