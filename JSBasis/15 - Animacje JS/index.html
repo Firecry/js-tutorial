@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(59, 59, 59);
+            margin: 0; padding: 0;
+        }
+        .box{
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: wheat;
+            background-color: rgb(88, 88, 88);
+            height: 100vh;
+            text-align: center;
+        }
+        .p1{
+            font-size: 4rem;
+        }
+        .p2{
+            font-size: 3rem;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+        #box2{
+            background-color: #222;
+        }
+        .inner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: left 1s ease-in-out;
+        }
+        .inner2{
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            transform: translate(-50%, -50%);
+        }
+        .opening{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="opening">Scroll Down</div>
+
+    <div id="box1" class="box">
+        <div class="inner">
+            <p class="p1">Tekst numer Jeden 1</p>
+            <p class="p2">Drugi Tekst 2</p>
+        </div>
+    </div>
+
+    <div id="box2" class="box">
+        <div class="inner">
+            <p class="p1">Tekst numer Trzy 3</p>
+            <p class="p2">Czwarty Tekst 4</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
