@@ -16,6 +16,7 @@ var mouse = {
 }
 
 var maxRadius = 40;
+var ballAmount = 3;
 
 var colorPalette = [
     '#845EC2',
@@ -70,14 +71,8 @@ function Circle(x, y, dx, dy, radius){
         this.x += this.dx;
         this.y += this.dy;
 
-        // interactivity
-        if((mouse.x - this.x < 50 && mouse.x - this.x > -50)&&(mouse.y - this.y < 50 && mouse.y - this.y > -50)){
-            if(this.dy > this.mindy){
-                this.dy -= 1;
-            }
-        }
-        else if(this.dy < 40){
-            this.dy += 1;
+        if(this.dy < 10){
+            this.dy+=0.1;
         }
 
         this.draw();
@@ -89,12 +84,12 @@ var circleArray = []
 function init(){
     circleArray = []
 
-    for(let i = 0; i < 1000; i++){
-        var x = Math.floor(Math.random() * (canvas.width - radius * 4) + radius);
-        var y = Math.floor(Math.random() * (canvas.height - radius * 4) + radius);
-        var dx = (Math.random() - .5);
+    for(let i = 0; i < (ballAmount + 1); i++){
+        var x = Math.floor(Math.random() * (canvas.width - radius * 5) + radius);
+        var y = Math.floor(Math.random() * (canvas.height - radius * 5) + radius);
+        var dx = (Math.random() - .5) * 10;
         var dy = (Math.random() - .5);
-        var radius = Math.random() * 8 + 2;
+        var radius = Math.random() * 15 + 3;
 
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
