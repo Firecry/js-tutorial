@@ -16,7 +16,7 @@ var mouse = {
 }
 
 var maxRadius = 40;
-var ballAmount = 3;
+var ballAmount = 5;
 
 var colorPalette = [
     '#845EC2',
@@ -56,7 +56,7 @@ function Circle(x, y, dx, dy, radius){
         c.fillStyle = this.color;
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         // c.strokeStyle = '#222';
-        c.stroke();
+        // c.stroke();
         c.fill();
     }
 
@@ -71,7 +71,7 @@ function Circle(x, y, dx, dy, radius){
         this.x += this.dx;
         this.y += this.dy;
 
-        if(this.dy < 10){
+        if(this.dy < 30){
             this.dy+=0.1;
         }
 
@@ -97,10 +97,10 @@ function init(){
 
 function animate(){
     requestAnimationFrame(animate);
-    c.clearRect(0, 0, canvas.width, canvas.height);
+    // c.clearRect(0, 0, canvas.width, canvas.height);
 
-    c.fillStyle = '#222';
-    c.fillRect(0, 0, canvas.width, canvas.height);
+    // c.fillStyle = '#222';
+    // c.fillRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < circleArray.length; i++){
         circleArray[i].update();
