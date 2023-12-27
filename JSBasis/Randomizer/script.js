@@ -1,0 +1,21 @@
+let box = document.getElementById('box1');
+let sign = [
+                '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+                'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e',
+                'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j',
+                'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o',
+                'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't',
+                'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y',
+                'Z', 'z'
+            ];
+
+let random = [];
+
+var arr = [];
+
+for(let j = 0; j < 6; j++){
+    random.push(sign[Math.floor(Math.random()*62)])
+    arr = random.join('')
+}
+
+box.innerHTML = `<p>${arr}</p>`
