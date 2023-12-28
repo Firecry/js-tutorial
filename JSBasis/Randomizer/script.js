@@ -13,9 +13,11 @@ let random = [];
 
 var arr = [];
 
-for(let j = 0; j < 6; j++){
-    random.push(sign[Math.floor(Math.random()*62)])
-    arr = random.join('')
-}
-
-box.innerHTML = `<p>${arr}</p>`
+setInterval(()=>{
+    random = [];
+    for(let j = 0; j < 6; j++){
+        random.push(sign[Math.floor(Math.random()*62)]);
+        arr = random.join('');
+    };
+    box.innerHTML = `<p>${arr}</p>`;
+}, 1000)
